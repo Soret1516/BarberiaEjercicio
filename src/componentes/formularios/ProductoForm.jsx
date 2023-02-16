@@ -16,7 +16,6 @@ export const ProductoForm = () => {
         imagenProducto: yup.string().required()
     });
 
-    const [registraStatus,setregistraStatus] = useState(true);
     const initialValues={
         nombre: "", descripcion: "", valor: 0, cantidad: 0, imagenProducto: ""};
 
@@ -24,7 +23,7 @@ export const ProductoForm = () => {
     const registrar = (datos) => {
         axios.post('http://localhost:3100/productos', datos).then(({data}) => {
             response = data;
-            setregistraStatus(false);
+            window.location.href = window.location.href;
         })
             .catch(error => {
                 console.log(error.response.data.message)
