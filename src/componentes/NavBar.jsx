@@ -6,7 +6,7 @@ export const NavBar = () => {
   return(
       <>
 
-          <Navbar bg="dark" variant="dark">
+          <Navbar bg="dark" variant="dark"  className="fixed-top ">
               <Container>
                   <Navbar.Brand><Link to="/" className="nav-link" > Barberia!</Link></Navbar.Brand>
                   <Nav className="me-auto">

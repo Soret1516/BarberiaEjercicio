@@ -1,16 +1,16 @@
-
+import * as yup from "yup";
 import axios from "axios";
+import {Card} from "react-bootstrap";
 import {Formik} from "formik";
 import {FormularioProducto} from "./FormularioProducto";
-import * as yup from 'yup';
-import {Card} from "react-bootstrap";
-import {useState} from "react";
 
-export const ProductoForm = () => {
-
+export const ClienteForm = () => {
     const validaciones = yup.object({
+        documento: yup.string().required(),
         nombre: yup.string().required(),
-        descripcion: yup.string().required(),
+        apellido: yup.string().required(),
+        telefono: yup.string().required(),
+        correo: yup.string().required(),
         valor: yup.number().required(),
         cantidad: yup.number().required(),
         imagenProducto: yup.string().required()
@@ -35,21 +35,22 @@ export const ProductoForm = () => {
             <div className="w-75 mx-auto mt-5 ">
                 <Card className="w-50 mx-auto p-4 bg-light mt-3 shadow">
                     <h3 className="text-primary"> Registre su producto</h3>
-            <Formik
-                initialValues={initialValues}
-                onSubmit={registrar}
-                validationSchema={validaciones}
-            >
+                    <Formik
+                        initialValues={initialValues}
+                        onSubmit={registrar}
+                        validationSchema={validaciones}
+                    >
 
-                {(properties) => {
-                    return <FormularioProducto props={properties}
-                    />
-                }}
+                        {(properties) => {
+                            return <FormularioProducto props={properties}
+                            />
+                        }}
 
-            </Formik>
+                    </Formik>
 
                 </Card>
             </div>
         </>
     );
+
 }

@@ -1,8 +1,19 @@
 import {Button, Card} from "react-bootstrap";
+import axios from "axios";
 
 export const Product = ({props}) => {
 
     const {data} = props;
+
+    const deleteProduct = (id)=> {
+
+        console.log(id);
+        axios.delete(`http://localhost:3100/productos/${id}`).
+            then(()=>{
+            window.location.href = window.location.href;
+        }).
+            catch()
+    };
 
     return(
         <>
@@ -20,7 +31,7 @@ export const Product = ({props}) => {
                 Existencia: {v.cantidad} <br/>
                 Valor: ${v.valor} <br/>
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="danger" onClick={()=>deleteProduct(v.producto_id)}>Eliminar</Button>
                 </Card.Body>
                 </Card>
 

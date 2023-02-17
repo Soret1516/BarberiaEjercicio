@@ -3,7 +3,7 @@ import {Clientes} from "./Clientes";
 import {Home} from "./Home";
 import {Citas} from "./Citas";
 import {Productos} from "./Productos";
-import {Container, Nav, Navbar, NavLink} from "react-bootstrap";
+import {Container, ModalFooter, Nav, Navbar, NavLink} from "react-bootstrap";
 import {NavBar} from "./NavBar";
 
 export const Router = () => {
@@ -16,6 +16,7 @@ export const Router = () => {
               <Route path={"/citas"} element={<Citas/>}/>
               <Route path={"/productos"} element={<Productos/>}/>
           </Routes>
+            <ModalFooter className=" bg-dark navbar-dark p-3 mt-4"> <p className="d-block m-auto text-light"> Barberia System </p></ModalFooter>
       </BrowserRouter>
   );
 }
