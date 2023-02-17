@@ -1,5 +1,6 @@
 import {Button, Card} from "react-bootstrap";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export const Product = ({props}) => {
 
@@ -31,7 +32,12 @@ export const Product = ({props}) => {
                 Existencia: {v.cantidad} <br/>
                 Valor: ${v.valor} <br/>
                 </Card.Text>
-                <Button variant="danger" onClick={()=>deleteProduct(v.producto_id)}>Eliminar</Button>
+                    <div className="d-flex flex-wrap w-75">
+                        <Button variant="danger" className="d-block  m-auto" onClick={()=>deleteProduct(v.producto_id)}>Eliminar</Button>
+                        <Link to={`producto/${v.producto_id}`} className="text-decoration-none">
+                            <Button variant="dark" className="d-block  m-auto" >Editar</Button>
+                        </Link>
+                    </div>
                 </Card.Body>
                 </Card>
 
