@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 
-export const useGet = (url, body) => {
+export const usePost = (url, body) => {
 
     const mount = useRef(true);
 

@@ -1,18 +1,56 @@
+
+
+
+
 body {
+  
+  background-image: url(./imgs/imagenfondo2jpg.jpg);
+  background-size: auto;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   margin: 0 20%
+   
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    color: #363f45;
 }
 
 .imgs{
   max-width: 300px;
   max-height: 250px;
+}
+
+#footer{
+  
+  padding-top: 15px;
+  padding-left: 15px;
+  height: 45px;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+nav,h1{
+  color: rgba(165, 160, 157, 0.897);
+  font-size: 15px;
+
+}
+nav,b{
+  color: rgba(114, 31, 11, 0.603);
+}
+
+#nav{
+  
+  position: fixed;
+
+  
 }

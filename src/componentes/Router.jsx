@@ -16,7 +16,7 @@ export const Router = () => {
               <Route path={"/citas"} element={<Citas/>}/>
               <Route path={"/productos"} element={<Productos/>}/>
           </Routes>
-            <ModalFooter className=" bg-dark navbar-dark p-3 mt-4"> <p className="d-block m-auto text-light"> Barberia System </p></ModalFooter>
+            <ModalFooter className=" bg-dark navbar-dark p-3 mt-4"> <p className="d-block m-auto text-light"> Barber Gentleman </p></ModalFooter>
       </BrowserRouter>
   );
 }

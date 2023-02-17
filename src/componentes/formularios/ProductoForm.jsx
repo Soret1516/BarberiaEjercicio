@@ -27,7 +27,7 @@ export const ProductoForm = () => {
         })
             .catch(error => {
                 console.log(error.response.data.message)
-            })
+            });
     }
     return (
         <>

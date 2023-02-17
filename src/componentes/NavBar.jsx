@@ -8,7 +8,7 @@ export const NavBar = () => {
 
           <Navbar bg="dark" variant="dark"  className="fixed-top ">
               <Container>
-                  <Navbar.Brand><Link to="/" className="nav-link" > Barberia!</Link></Navbar.Brand>
+                  <Navbar.Brand><Link to="/" className="nav-link" > <h1>Barber<b>Gentleman</b></h1> </Link></Navbar.Brand>
                   <Nav className="me-auto">
                       <Link to="clientes" className="nav-link">
                           Clientes

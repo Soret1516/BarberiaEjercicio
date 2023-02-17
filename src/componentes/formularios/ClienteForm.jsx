@@ -2,7 +2,7 @@ import * as yup from "yup";
 import axios from "axios";
 import {Card} from "react-bootstrap";
 import {Formik} from "formik";
-import {FormularioProducto} from "./FormularioProducto";
+import {FormularioCliente} from "./FormularioCliente";
 
 export const ClienteForm = () => {
     const validaciones = yup.object({
@@ -11,17 +11,17 @@ export const ClienteForm = () => {
         apellido: yup.string().required(),
         telefono: yup.string().required(),
         correo: yup.string().required(),
-        valor: yup.number().required(),
-        cantidad: yup.number().required(),
-        imagenProducto: yup.string().required()
+        direccion: yup.string().required(),
+       
+       
     });
 
     const initialValues={
-        nombre: "", descripcion: "", valor: '', cantidad: "", imagenProducto: ""};
+        nombre: "", documento: "", apellido: '', telefono: "", imagenProducto: "", correo: ""};
 
     let response = "";
     const registrar = (datos) => {
-        axios.post('http://localhost:3100/productos', datos).then(({data}) => {
+        axios.post('http://localhost:3100/clientes', datos).then(({data}) => {
             response = data;
             window.location.href = window.location.href;
         })
@@ -34,7 +34,7 @@ export const ClienteForm = () => {
 
             <div className="w-75 mx-auto mt-5 ">
                 <Card className="w-50 mx-auto p-4 bg-light mt-3 shadow">
-                    <h3 className="text-primary"> Registre su producto</h3>
+                    <h3 className="text-primary"> Registro de cliente</h3>
                     <Formik
                         initialValues={initialValues}
                         onSubmit={registrar}
@@ -42,7 +42,7 @@ export const ClienteForm = () => {
                     >
 
                         {(properties) => {
-                            return <FormularioProducto props={properties}
+                            return <FormularioCliente props={properties}
                             />
                         }}
 
