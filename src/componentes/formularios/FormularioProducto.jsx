@@ -1,9 +1,11 @@
 import {Button, FloatingLabel, Form, FormControl, FormGroup} from "react-bootstrap";
+import {useEffect} from "react";
 
 export const FormularioProducto = ({props}) => {
 
     //Se obtienen las configuraciones de Formik, para controlar los valores de los datos del formulario
     const {touched, values, handleChange, handleSubmit, errors} = props
+
 
 
     return (
