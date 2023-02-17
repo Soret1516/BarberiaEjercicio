@@ -22,8 +22,8 @@ export const Product = ({props}) => {
 
                 (
                 (
-                <Card key={k} className="d-block w-25 mx-4 my-3">
-                <Card.Img className="p-4" variant="top" src={`imgs/${v.imagenProducto}`} />
+                <Card key={k} className="d-block   mx-4 my-3">
+                <Card.Img className="p-4 imgs " variant="top" src={`imgs/${v.imagenProducto}`} />
                 <Card.Body>
                 <Card.Title>{v.nombre}</Card.Title>
                 <Card.Text>
