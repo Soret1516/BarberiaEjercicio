@@ -1,6 +1,6 @@
 import {Button, FloatingLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 
-export const FormularioCliente = ({props}) => {
+export const FormularioCitas = ({props}) => {
 
     //Se obtienen las configuraciones de Formik, para controlar los valores de los datos del formulario
     const {touched, values, handleChange, handleSubmit, errors} = props
@@ -15,27 +15,18 @@ export const FormularioCliente = ({props}) => {
                 label="Nombre"
                 className="mb-3"
             >
-                <FormControl type="text" name="nombre" placeholder="Nombre del cliente "
+                <FormControl type="text" name="nombre" placeholder="Nombre Completo"
                              value={values.nombre}
                              onChange={handleChange}
                 />
             </FloatingLabel>
+               
                 <FloatingLabel
                     controlId="floatingInput"
-                    label="Apellido"
+                    label="Documento de identidad"
                     className="mb-3"
                 >
-                    <FormControl type="text" name="apellido" placeholder="Apellido del cliente"
-                                 value={values.apellido}
-                                 onChange={handleChange}
-                    />
-                </FloatingLabel>
-                <FloatingLabel
-                    controlId="floatingInput"
-                    label="Documento"
-                    className="mb-3"
-                >
-                    <FormControl type="text" name="documento" placeholder="Documento del cliente"
+                    <FormControl type="text" name="documento" placeholder="Documento de identidad"
                                  value={values.documento}
                                  onChange={handleChange}
                     />
@@ -45,28 +36,19 @@ export const FormularioCliente = ({props}) => {
                     label="Telefono"
                     className="mb-3"
                 >
-                    <FormControl type="text" name="telefono" placeholder="Telefono del cliente"
+                    <FormControl type="text" name="telefono" placeholder="Telefono "
                                  value={values.telefono}
                                  onChange={handleChange}
                     />
                 </FloatingLabel>
-                <FloatingLabel
-                    controlId="floatingInput"
-                    label="direccion"
-                    className="mb-3"
-                >
-                    <FormControl type="text" name="direccion" placeholder=" direccion"
-                                 value={values.direccion}
-                                 onChange={handleChange}
-                    />
-                </FloatingLabel>
+               
 
                 <FloatingLabel
                     controlId="floatingInput"
                     label="correo"
                     className="mb-3"
                 >
-                    <FormControl type="text" name="correo" placeholder="correo del cliente"
+                    <FormControl type="text" name="correo" placeholder="correo"
                                  value={values.correo}
                                  onChange={handleChange}
                     />
@@ -74,11 +56,11 @@ export const FormularioCliente = ({props}) => {
 
                 <FloatingLabel
                     controlId="floatingInput"
-                    label="Imagen del Cliente"
+                    label="Imagen del agendador"
                     className="mb-3"
                 >
-                    <FormControl type="text" name="imagenCliente" placeholder="Imagen del Cliente"
-                                 value={values.imagenCliente}
+                    <FormControl type="text" name="imagenAgendador" placeholder="Imagen del agendador"
+                                 value={values.imagenAgendador}
                                  onChange={handleChange}
                     />
                 </FloatingLabel>

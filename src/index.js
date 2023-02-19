@@ -6,10 +6,14 @@ import {BarberiaApp} from "./componentes/BarberiaApp";
 import {BrowserRouter, Link} from "react-router-dom";
 import {Container, Nav, Navbar, NavLink} from "react-bootstrap";
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<>
 
-
-        <BarberiaApp/>
+<div>
+<BarberiaApp/>
+      
+</div>
+       
 </>
 );

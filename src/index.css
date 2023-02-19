@@ -28,16 +28,7 @@ code {
   max-height: 250px;
 }
 
-#footer{
-  
-  padding-top: 15px;
-  padding-left: 15px;
-  height: 45px;
 
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
 nav,h1{
   color: rgba(165, 160, 157, 0.897);
@@ -47,10 +38,15 @@ nav,h1{
 nav,b{
   color: rgba(114, 31, 11, 0.603);
 }
-
-#nav{
-  
-  position: fixed;
-
-  
+#logo{
+  height: 40px;
+  margin-right: 10px;
 }
+
+#nav,p{
+  color: rgba(165, 160, 157, 0.897);
+  font-size: 15px;
+
+}
+
+
