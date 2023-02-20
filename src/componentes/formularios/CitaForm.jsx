@@ -3,20 +3,22 @@ import axios from "axios";
 import {Card} from "react-bootstrap";
 import {Formik} from "formik";
 import { FormularioCitas } from "./FormularioCitas";
+import {useState} from "react";
+
 
 export const CitaForm = () => {
     const validaciones = yup.object({
-        documento: yup.string().required(),
-        nombre: yup.string().required(),
-        telefono: yup.string().required(),
-        correo: yup.string().required(),
-        imagenAgendador: yup.string().required()
-       
-       
+        fecha: yup.date().required(),
+        barbero: yup.string().required(),
+        nombreServicio: yup.string().required(),
+        descripcionServicio: yup.string().required(),
+        imgCliente: yup.string().required(),
+        direccionCliente:yup.string().required(),
+        valorServicio:yup.string().required()
     });
 
     const initialValues={
-        nombre: "", documento: "",  telefono: "", direccion: "", correo: "" ,imagenAgendador: ""};
+        fecha:"2023-02-19", barbero: "",  nombreServicio: "", descripcionServicio: "" ,imgCliente: "",direccionCliente:"" ,valorServicio:""};
 
     let response = "";
     const registrar = (datos) => {

@@ -1,6 +1,5 @@
 
 import {ClienteForm} from "./formularios/ClienteForm";
-import {ModalFooter} from "react-bootstrap";
 import {useGet} from "../servicios/useGet";
 import { Client } from "./utilidades/Client";
 
@@ -14,7 +13,7 @@ export const Clientes = () => {
               <Client props={data}></Client>
           </div>
           <ClienteForm/>
-      </>   <ModalFooter/>
+      </>   
         </>
     );
 }

@@ -7,6 +7,7 @@ import {Container, ModalFooter, Nav, Navbar, NavLink} from "react-bootstrap";
 import {NavBar} from "./NavBar";
 import {EditarProducto} from "./formularios/EditarProducto";
 import {EditarCliente} from  "./formularios/EditarCliente"
+import {EditarCita} from "./formularios/EditarCita"
 
 export const Router = () => {
   return(
@@ -16,6 +17,7 @@ export const Router = () => {
               <Route path={"/"} element={<Home/>}/>
               <Route path={"/clientes"} element={<Clientes/>}/>
               <Route path={"/citas"} element={<Citas/>}/>
+              <Route path={"/citas/cita/:id"} element={<EditarCita/>}/>
               <Route path={"/productos"} element={<Productos/>}/>
               <Route path={"/productos/producto/:id"} element={<EditarProducto/>}/>
               <Route path={"/clientes/cliente/:id"} element={<EditarCliente/>}/>
